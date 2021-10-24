@@ -1,0 +1,30 @@
+{
+  "name": "ontapnodejsss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"node index.js\" \"node-sass -w ./public/scss/ -o ./public/css/\" \"watchify ./public/js/script.js -o ./public/bundle/bundle.js -d -v -t babelify --plugin tinyify\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "pug": "^3.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "babelify": "^10.0.0",
+    "browserify": "^17.0.0",
+    "concurrently": "^5.3.0",
+    "connect-livereload": "^0.6.1",
+    "livereload": "^0.9.1",
+    "node-sass": "^5.0.0",
+    "nodemon": "^2.0.7",
+    "tinyify": "^3.0.0",
+    "watchify": "^3.11.1"
+  }
+}
