@@ -16,20 +16,20 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 // Livereload
-var livereload = require('livereload');
-var watchServer = livereload.createServer();
+// var livereload = require('livereload');
+// var watchServer = livereload.createServer();
 
-// Connect-livereload
-const connectLivereload = require("connect-livereload");
-app.use(connectLivereload());
-watchServer.watch(path.join(__dirname, 'public'));
+// // Connect-livereload
+// const connectLivereload = require("connect-livereload");
+// app.use(connectLivereload());
+// watchServer.watch(path.join(__dirname, 'public'));
 
-// This is reset pug
-watchServer.server.once("connection", () => {
-  setTimeout(() => {
-    watchServer.refresh('/');
-  }, 500);
-});
+// // This is reset pug
+// watchServer.server.once("connection", () => {
+//   setTimeout(() => {
+//     watchServer.refresh('/');
+//   }, 500);
+// });
 
 app.get('/', (req, res) => {
   res.render('index', {
