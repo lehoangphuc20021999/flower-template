@@ -25,7 +25,7 @@ section#cart-info
                                                     span.price-cart1 450.000₫                                   
                                         td.text-center
                                             //- If press negative number then change postive number absolutely
-                                            input.text-center.quantity(type="number", name="number", value= "1", min="0", oninput="this.value = Math.abs(this.value)")
+                                            input.text-center.quantity(type="number", name="number", value= "1", min="1", oninput="this.value = Math.abs(this.value)")
                                         td.text-center
                                             span.price-cart2 900.000₫
                                         td(scope='row').text-center
@@ -41,7 +41,7 @@ section#cart-info
                                                     span.price-cart1 450.000₫                                   
                                         td.text-center
                                             //- If press negative number then change postive number absolutely
-                                            input.text-center.quantity(type="number", name="number", value= "1", min="0", oninput="this.value = Math.abs(this.value)")
+                                            input.text-center.quantity(type="number", name="number", value= "1", min="1", oninput="this.value = Math.abs(this.value) && this.value > 0 ?  Math.abs(this.value) : 1")
                                         td.text-center
                                             span.price-cart2 900.000₫
                                         td(scope='row').text-center

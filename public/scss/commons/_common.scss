@@ -181,6 +181,11 @@ img {
     .item-title {
         font-weight: 400;
         a {
+            //- Limit one line
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
             font-size: 17px;
             transition: 0.35s;
             &:hover {

@@ -3,8 +3,10 @@ function quantityProduct() {
         //- Increase, decrease amount of product in product-info.pug
         $('.minus-icon').click(function () {
             let quantity = parseInt($('#quantity').val());
+
+            quantity -= 1;
+
             if (quantity > 0) {
-                quantity -= 1;
                 $('.form-product #quantity').val(quantity);
             }
             else {
