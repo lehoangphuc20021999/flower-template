@@ -943,61 +943,77 @@ header {
 
 #collection {
   margin: 40px 0px; }
+  #collection .overlay {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.35s; }
+    #collection .overlay.open {
+      opacity: 1;
+      visibility: visible; }
   #collection .section-title {
     margin-bottom: 15px; }
     #collection .section-title .title {
       font-size: 25px; }
-  #collection .aside .aside-item input[type="radio"],
-  #collection .aside .aside-item input[type="checkbox"] {
-    position: absolute;
-    left: -999em; }
-  #collection .aside .aside-item input[type="radio"] + span:before,
-  #collection .aside .aside-item input[type="checkbox"] + span::before {
-    content: "";
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-    margin-right: 10px;
-    vertical-align: middle;
-    border: 1px solid #eaeaea;
-    border-radius: 2px;
-    font: normal 20px/16px Verdana, sans-serif;
-    color: #636363; }
-  #collection .aside .aside-item input[type="radio"]:checked + span::before,
-  #collection .aside .aside-item input[type="checkbox"]:checked + span::before {
-    font-size: 15px;
-    padding-left: 2px;
-    content: "✓";
-    border-color: #636363; }
-  #collection .aside .aside-item label {
-    cursor: pointer;
-    display: inline-block;
-    color: #9397a5; }
-  #collection .aside .aside_product_small .product-item {
-    padding: 0px 15px;
-    margin-bottom: 20px; }
-    #collection .aside .aside_product_small .product-item:hover {
-      box-shadow: none; }
-  #collection .aside .aside_product_small .tag-sale {
-    top: -1px;
-    right: -1px;
-    border-top: 53px solid #8781bd;
-    border-left: 53px solid transparent; }
-    #collection .aside .aside_product_small .tag-sale span {
+  #collection .aside {
+    background-color: #fff; }
+    #collection .aside .aside-item input[type="radio"],
+    #collection .aside .aside-item input[type="checkbox"] {
+      position: absolute;
+      left: -999em; }
+    #collection .aside .aside-item input[type="radio"] + span:before,
+    #collection .aside .aside-item input[type="checkbox"] + span::before {
+      content: "";
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      margin-right: 10px;
+      vertical-align: middle;
+      border: 1px solid #eaeaea;
+      border-radius: 2px;
+      font: normal 20px/16px Verdana, sans-serif;
+      color: #636363; }
+    #collection .aside .aside-item input[type="radio"]:checked + span::before,
+    #collection .aside .aside-item input[type="checkbox"]:checked + span::before {
       font-size: 15px;
-      top: -45px;
-      right: 3px; }
-  #collection .aside .aside_product_small .image {
-    margin-bottom: 0; }
-  #collection .aside .aside_product_small .info .item-title {
-    line-height: 18px; }
-  #collection .aside .aside_product_small .info a {
-    font-size: 16px; }
-  #collection .aside .aside_product_small .price {
-    margin-bottom: 0; }
-    #collection .aside .aside_product_small .price .special-price,
-    #collection .aside .aside_product_small .price .old-price {
-      font-size: 17px; }
+      padding-left: 2px;
+      content: "✓";
+      border-color: #636363; }
+    #collection .aside .aside-item label {
+      cursor: pointer;
+      display: inline-block;
+      color: #9397a5; }
+    #collection .aside .aside_product_small .product-item {
+      padding: 0px 15px;
+      margin-bottom: 20px; }
+      #collection .aside .aside_product_small .product-item:hover {
+        box-shadow: none; }
+    #collection .aside .aside_product_small .tag-sale {
+      top: -1px;
+      right: -1px;
+      border-top: 53px solid #8781bd;
+      border-left: 53px solid transparent; }
+      #collection .aside .aside_product_small .tag-sale span {
+        font-size: 15px;
+        top: -45px;
+        right: 3px; }
+    #collection .aside .aside_product_small .image {
+      margin-bottom: 0; }
+    #collection .aside .aside_product_small .info .item-title {
+      line-height: 18px; }
+    #collection .aside .aside_product_small .info a {
+      font-size: 16px; }
+    #collection .aside .aside_product_small .price {
+      margin-bottom: 0; }
+      #collection .aside .aside_product_small .price .special-price,
+      #collection .aside .aside_product_small .price .old-price {
+        font-size: 17px; }
   #collection .main_container .banner {
     position: relative;
     margin-top: 13px;

@@ -2,23 +2,31 @@ function openFilters() {
     $(document).ready(function () {
         //- Open filter in collection.pug
         $('.open-filters').click(function (e) {
+
             //- Chuyển icon
-            if ($(this).find('i').hasClass('bxs-filter-alt')) {
-                $(this).find('i').removeClass('bxs-filter-alt')
-                $(this).find('i').addClass('bx-x')
-            } else {
-                $(this).find('i').removeClass('bx-x')
-                $(this).find('i').addClass('bxs-filter-alt')
-            }
+            $(this).find('i').toggleClass("bxs-filter-alt bx-x");
 
             //- Mở filters
             if ($('.aside').hasClass('open') || $('.open-filters').hasClass('open')) {
-                $('.aside, .open-filters').removeClass('open')
+                $('.aside, .open-filters, #collection .overlay').removeClass('open')
+                $(document.body).removeClass('overflow-hidden')
             }
             else {
-                $('.aside, .open-filters').addClass('open')
+                $('.aside, .open-filters, #collection .overlay').addClass('open')
+                $(document.body).addClass('overflow-hidden')
             }
+        })
 
+        //- Click outside and close filter menu
+        $(document).on("click", function (e) {
+            const container = $('#collection')
+            console.log(e.target, $(e.target).hasClass('overlay'));
+
+            if ((!container.is(e.target) && container.has(e.target).length === 0) || $(e.target).hasClass('overlay')) {
+                $('.aside, .open-filters, #collection .overlay').removeClass('open');
+                $('.open-filters').find('i').toggleClass("bxs-filter-alt bx-x");
+                $(document.body).removeClass('overflow-hidden')
+            }
         })
     });
 }
