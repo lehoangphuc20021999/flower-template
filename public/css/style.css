@@ -892,7 +892,7 @@ header {
       color: white;
       opacity: 0;
       visibility: hidden;
-      transition: .35s ease-in-out; }
+      transition: 0.35s ease-in-out; }
       #hotdeal .item .btn-buy i {
         font-size: 18px; }
       #hotdeal .item .btn-buy:hover {
@@ -903,6 +903,10 @@ header {
       transform: translate(-50%, -50%); }
 
 /* Responsive */
+@media (max-width: 992px) {
+  #hotdeal form {
+    display: none; } }
+
 @media (max-width: 576px) {
   #hotdeal .item {
     margin-bottom: 20px; } }
@@ -1815,3 +1819,13 @@ header {
   .back-to-top.open {
     opacity: 1;
     visibility: visible; }
+
+/* Responsive */
+@media (max-width: 992px) {
+  .back-to-top {
+    width: 56px;
+    height: 56px;
+    line-height: 56px; }
+    .back-to-top i {
+      font-size: 25px;
+      color: #fff; } }
