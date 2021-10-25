@@ -11,7 +11,12 @@
   font-family: "Quicksand", sans-serif;
   font-size: 15px; }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: #323c3f; }
 
 .btn:focus, .btn:active:focus, .btn.active:focus {
@@ -77,7 +82,7 @@ img {
     font-weight: 400;
     letter-spacing: 1.5px; }
     .section-title .title:before, .section-title .title:after {
-      content: '';
+      content: "";
       flex: 1 1;
       border-bottom: 3px double #d7d7d7; }
     .section-title .title:before {
@@ -95,7 +100,7 @@ img {
   margin-right: 7px;
   background-color: #8781bd;
   color: white !important;
-  transition: .35s ease-in-out; }
+  transition: 0.35s ease-in-out; }
   .social-links a:hover {
     background-color: #66609c; }
 
@@ -103,6 +108,8 @@ img {
   font-size: 16px; }
 
 .item {
+  max-width: max-content;
+  margin: 0 auto;
   position: relative;
   overflow: hidden;
   text-align: center;
@@ -111,7 +118,7 @@ img {
   border: 1px solid #eeeeee;
   margin-bottom: 30px;
   cursor: pointer;
-  transition: .35s; }
+  transition: 0.35s; }
   .item .tag-sale {
     border-top: 71px solid #8781bd;
     border-left: 71px solid transparent;
@@ -134,7 +141,7 @@ img {
     margin-bottom: 15px; }
     .item .image a {
       display: block;
-      transition: .5s; }
+      transition: 0.5s; }
     .item .image .find-in {
       position: absolute;
       top: 50%;
@@ -151,7 +158,7 @@ img {
     font-weight: 400; }
     .item .item-title a {
       font-size: 17px;
-      transition: .35s; }
+      transition: 0.35s; }
       .item .item-title a:hover {
         color: #66609c !important; }
   .item .price {
@@ -171,7 +178,7 @@ img {
       border-radius: 4px 4px 4px 4px;
       border: none;
       padding: 0;
-      transition: .35s; }
+      transition: 0.35s; }
       .item .actions .btn-buy span {
         padding: 0px 25px; }
     .item .actions .icon {
@@ -181,7 +188,7 @@ img {
       height: 100%;
       line-height: 37px;
       border-radius: 0px 4px 4px 0px;
-      transition: .35s; }
+      transition: 0.35s; }
   .item .box-link {
     padding: 5px 0px 8px;
     overflow: hidden; }
@@ -217,18 +224,18 @@ img {
       background-color: #66609c; }
 
 .hover-purple {
-  transition: .35s ease; }
+  transition: 0.35s ease; }
   .hover-purple:hover {
     color: white;
     background-color: #66609c !important; }
 
 .hover-text-green {
-  transition: .35s ease; }
+  transition: 0.35s ease; }
   .hover-text-green:hover {
     color: #b7fc56 !important; }
 
 .hover-text-purple {
-  transition: .35s ease; }
+  transition: 0.35s ease; }
   .hover-text-purple:hover {
     color: #66609c !important; }
 
@@ -248,7 +255,7 @@ img {
       height: 100%;
       padding: 0; }
       .slick-slider .slick-dots button::before {
-        content: '';
+        content: "";
         width: 100%;
         height: 100%;
         border-radius: 50%;
@@ -278,7 +285,8 @@ img {
   .slick-arrow i {
     font-size: 25px; }
 
-.prev-arrow, .next-arrow {
+.prev-arrow,
+.next-arrow {
   width: 45px;
   height: 45px;
   border: 2px solid;
@@ -315,22 +323,29 @@ img {
   background-color: #8781bd;
   color: white; }
 
-#nav-mobile ul > li:not(:last-child), .aside-category ul > li:not(:last-child) {
+#nav-mobile ul > li:not(:last-child),
+.aside-category ul > li:not(:last-child) {
   border-bottom: 1px solid #dbdbdb; }
 
-#nav-mobile a, .aside-category a {
+#nav-mobile a,
+.aside-category a {
   display: block;
   padding: 8px 0px; }
 
-#nav-mobile .dropdown, .aside-category .dropdown {
+#nav-mobile .dropdown,
+.aside-category .dropdown {
   padding-right: 5px; }
-  #nav-mobile .dropdown > a i, .aside-category .dropdown > a i {
+  #nav-mobile .dropdown > a i,
+  .aside-category .dropdown > a i {
     transition: 0.35s; }
-    #nav-mobile .dropdown > a i.rotate180deg, .aside-category .dropdown > a i.rotate180deg {
+    #nav-mobile .dropdown > a i.rotate180deg,
+    .aside-category .dropdown > a i.rotate180deg {
       transform: rotate(180deg); }
-  #nav-mobile .dropdown > ul, .aside-category .dropdown > ul {
+  #nav-mobile .dropdown > ul,
+  .aside-category .dropdown > ul {
     display: none; }
-    #nav-mobile .dropdown > ul a, .aside-category .dropdown > ul a {
+    #nav-mobile .dropdown > ul a,
+    .aside-category .dropdown > ul a {
       margin-left: 5px; }
 
 @media (max-width: 992px) {
@@ -352,7 +367,8 @@ img {
     justify-content: center; }
   .slick-arrow {
     font-size: 24px; }
-  .prev-arrow, .next-arrow {
+  .prev-arrow,
+  .next-arrow {
     width: 38px;
     height: 38px; }
   .slick-slider .slick-dots li {
