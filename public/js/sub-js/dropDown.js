@@ -1,16 +1,20 @@
-function dropDown(){
-    $(document).ready(function(){
+function dropDown() {
+    $(document).ready(function () {
         //- Toggle for products-page
-        $('.aside-category .dropdown').click(function(e){
+        $('.aside-category .dropdown').click(function (e) {
             $(this).find('> ul').slideToggle(350);
             //- Rotate icon i
             $(this).find('> a i').toggleClass("rotate180deg");
         });
 
-        $('.dropdown-btn').click(function(e){
-            e.preventDefault();        
+        $('.dropdown-btn').click(function (e) {
+            e.preventDefault(); // Now link won't go anywhere
+        });
+
+        $('.dropdown-btn ul').find('a').click(function (e) {
+            e.stopPropagation(); // Now the event won't bubble up
         });
     });
 }
 
-export {dropDown};
+export { dropDown };
